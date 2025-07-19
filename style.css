@@ -236,10 +236,20 @@ section h2 {
   margin-bottom: 32px;
 }
 
+@media (max-width: 768px) {
+  .project-badges {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+}
+
 .badge {
   background: #fff;
   color: #222;
-  padding: 8px 18px 8px 40px;
+  padding: 8px 18px 8px 42px;
   border-radius: 999px;
   font-size: 0.92rem;
   font-weight: 200;
@@ -247,7 +257,8 @@ section h2 {
   align-items: center;
   box-shadow: 0 1px 4px rgba(0,0,0,0.04);
   position: relative;
-  min-width: 120px;
+  min-width: 130px;
+  white-space: nowrap;
 }
 
   .badge::before {
@@ -524,12 +535,13 @@ footer {
 /* Specific styling for portfolio image to fit properly */
 .research-card .project-img {
   object-fit: contain;
-  padding: 20px;
+  padding: 12px;
   background: #fff;
 }
 
 .research-card .project-image-container {
   background: #f8f8f8;
+  padding: 4px;
 }
 
 /* Hero appear animation */
@@ -926,9 +938,12 @@ h1, h2, h3, h4, h5, h6 {
   }
   
   .hire-btn {
-    padding: 12px 20px;
+    padding: 12px 24px;
     font-size: 0.95rem;
-    margin-top: 8px;
+    margin-top: 12px;
+    border-radius: 20px;
+    min-width: 140px;
+    text-align: center;
   }
 }
 
@@ -940,8 +955,8 @@ h1, h2, h3, h4, h5, h6 {
   }
   
   .hero-card {
-    padding: 32px 20px;
-    gap: 24px;
+    padding: 24px 20px;
+    gap: 16px;
     width: 95vw;
     margin: 16px 0;
     border-radius: 16px;
@@ -957,6 +972,21 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.1rem;
     text-align: center;
     max-width: 100%;
+    margin-bottom: 24px;
+  }
+  
+  .hero-buttons {
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+  }
+  
+  .download-btn {
+    padding: 14px 20px;
+    font-size: 0.95rem;
+    border-radius: 20px;
+    min-width: 160px;
+    text-align: center;
   }
   
   .hero-profile-pic {
@@ -995,18 +1025,23 @@ h1, h2, h3, h4, h5, h6 {
   .project-badges {
     align-items: center;
     gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
   }
   
   .badge {
-    padding: 6px 16px 6px 32px;
-    font-size: 0.85rem;
-    min-width: 100px;
+    padding: 10px 16px 10px 38px;
+    font-size: 0.8rem;
+    min-width: 110px;
+    position: relative;
+    margin: 2px;
+    text-align: left;
   }
   
   .badge::before {
-    width: 18px;
-    height: 18px;
-    left: 8px;
+    width: 14px;
+    height: 14px;
+    left: 12px;
   }
   
   .view-project-link {
@@ -1016,16 +1051,13 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: center;
   }
   
-  .project-image-container {
-    width: 100%;
-    max-width: 300px;
-    height: 200px;
-    margin: 0 auto;
-    border-radius: 12px;
+  .project-image-container,
+  .project-images-stack {
+    display: none !important;
   }
   
   .project-img {
-    border-radius: 12px;
+    display: none;
   }
 }
 
@@ -1136,9 +1168,15 @@ h1, h2, h3, h4, h5, h6 {
   
   /* Better buttons for touch */
   .download-btn, .hire-btn {
-    min-height: 44px;
+    min-height: 48px;
     padding: 14px 24px;
     font-size: 1rem;
+    border-radius: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-sizing: border-box;
   }
   
   /* Improved footer */
@@ -1185,6 +1223,25 @@ h1, h2, h3, h4, h5, h6 {
   
   .tools-title {
     font-size: 1.4rem;
+  }
+  
+  /* Better button styling for very small screens */
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .download-btn {
+    padding: 12px 18px;
+    font-size: 0.9rem;
+    min-width: 150px;
+  }
+  
+  .hire-btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    min-width: 130px;
   }
 }
   
